@@ -52,10 +52,6 @@ d)Open the Unity project, press play, and your game is ready!
 UniGen/
 │── blue_pipeline.py         # Main automation pipeline
 │── gpt_interface.py         # GPT/MLLM connector
-│── UnityProject/
-│   └── Assets/
-│       ├── Editor/          # Auto-generated editor scripts
-│       └── Scripts/         # Runtime gameplay scripts
 │── requirements.txt
 │── README.md
 ```
