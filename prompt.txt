@@ -1,0 +1,109 @@
+#--------------1------------------
+    asset_info = {
+    "models": [],
+    "map": ""
+}
+game_description = (
+    "You are a Unity game development expert. Please generate a complete GameObject blueprint for a minimalist 3D ball-rolling track game. The creation method, components, scripts, and dependencies for each GameObject must be clearly defined.\n"
+    "Requirements:\n"
+    "1. All GameObjects must be created using Unity's basic primitive shapes (e.g., Sphere, Cube, Plane).\n"
+    "2. The scene must contain the following objects:\n"
+    "  - 🎥 main_camera: automatically follows the ball from a third-person perspective behind the ball.\n"
+    "  - ⚽ ball:\n"
+    "    - Automatically moves forward at constant speed.\n"
+    "    - Press 'A' to move left while maintaining forward motion.\n"
+    "    - Press 'D' to move right while maintaining forward motion.\n"
+    "    - Collides with barrier trigger game over.\n"
+    "    - Falls off runway trigger game over.\n"
+    "    - Collides with end_point trigger game won.\n"
+    "  - 🛣️ runway: a long rectangular track containing barriers and end_point.\n"
+    "  - 🧱 barrier: 5-10 cube obstacles placed on the track with clear passage paths.\n"
+    "  - 🏁 end_point: a cube covering the full width of the runway endpoint.\n"
+    "3. Interaction Requirements:\n"
+    "- 🎥 main_camera follows ball's movement continuously.\n"
+    "- ⚽ ball maintains constant forward speed with lateral movement control.\n"
+    "- 💥 ball collides with barrier: Game over.\n"
+    "- 📉 ball falls off runway: Game over.\n"
+    "- ✅ ball collides with end_point: Game won.\n"
+    "- 🖼️ UI:\n"
+    "    - Display WinText on victory.\n"
+    "    - Display FailText on failure.\n"
+    "4. Each GameObject must clearly specify: name, create_type, asset_path, primitive_type, position, rotation, scale, tag, layer, components, scripts, script_fields.\n"
+    "5. Automatically add Canvas, EventSystem, and UI components for game state display.\n"
+)
+
+#--------------2------------------
+    asset_info = {
+        "models": [
+            "Assets/UnityTechnologies/3DBeginnerTutorial/Art/Models/Characters/JohnLemon.fbx",
+            "Assets/UnityTechnologies/3DBeginnerTutorial/Art/Models/Characters/Ghost.fbx",
+            "Assets/UnityTechnologies/3DBeginnerTutorial/Art/Models/Characters/Gargoyle.fbx"
+        ],
+        "map": "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Level.prefab"
+    }
+
+    game_description = (
+        "You are a Unity game development expert. Please generate a complete GameObject blueprint for a minimalist 3D obstacle course game. The creation method, components, scripts, and dependencies for each GameObject must be clearly defined.\n"
+        "Requirements:\n"
+        "1. All GameObjects must be created using Unity's basic Primitive shapes (e.g., Sphere, Cube, Plane).\n"
+        "2. The scene must contain the following objects:\n"
+        "  - 🗺️️ map: a prefabricated level.\n"
+        "  - 📷 main camera: automatically follows the JohnLemon.\n"
+        "  - 🕹️ JohnLemon:\n"
+        "    - Press 'w' to move forward.\n"
+        "    - Press 's' to move backward.\n"
+        "    - Press 'a' to turn left and move forward.\n"
+        "    - Press 'd' to turn right and move forward.\n"
+        "    - Collides with the endpoint cube trigger game won.\n"
+        "    - Collides with Ghost trigger game over.\n"
+        "    - Scanned by Gargoyle trigger game over.\n"
+        "    - **Set the `IsWalking` Bool parameter to control the idle/walking animation.**\n"
+        "  - 👻 Ghost:\n"
+        "    - Patrols the map back and forth along a fixed route.\n"
+        "    - Always faces forward.\n"
+        "    - Collides with JohnLemon trigger game over.\n"
+        "  - 🗿 Gargoyle:\n"
+        "    - Scans the map with a 90-degree angle sweep.\n"
+        "    - Scanning JohnLemon trigger game over.\n"
+        "3. Interaction Requirements:\n"
+        "- 🚫 JohnLemon collides with Ghost: Game over.\n"
+        "- 👁️ JohnLemon is detected by Gargoyle's scan: Game over.\n"
+        "- ✅ JohnLemon collides with the endpoint cube: Game won.\n"
+        "- 🖼️ UI:\n"
+        "    - Display WinText on victory.\n"
+        "    - Display FailText on failure.\n"
+    )
+
+#--------------3------------------
+    asset_info = {
+        "models": [],
+        "animations": [],
+        "map": ""
+    }
+    game_description = (
+        "You are a Unity game development expert. Please generate a complete GameObject blueprint for a minimalist 3D obstacle course coin collection game. The creation method, components, scripts, and dependencies for each GameObject must be clearly defined.\n"
+        "Requirements:\n"
+        "1. All GameObjects must be created using Unity's basic primitive shapes (e.g., Sphere, Cube, Plane).\n"
+        "2. The scene must contain the following objects:\n"
+        "  - 🎥 main_camera: automatically follows the ball from a third-person perspective behind the ball.\n"
+        "  - ⚽ ball:\n"
+        "    - Press 'W' to move forward at constant speed.\n"
+        "    - Press 'S' to move backward at constant speed.\n"
+        "    - Press 'A' to move left at constant speed.\n"
+        "    - Press 'D' to move right at constant speed.\n"
+        "    - Collides with coin makes coin disappear.\n"
+        "    - Falls off platform triggers game over.\n"
+        "  - 💰 coin: multiple spinning coins (cubes tilted at angle) that rotate slowly on multiple axes.\n"
+        "  - 🟦 plane: a square platform serving as the game area for ball movement and coin placement.\n"
+        "3. Interaction Requirements:\n"
+        "  - ⚽ ball movement controls (W/A/S/D) at constant speed.\n"
+        "  - 💥 ball collides with coin: coin disappears and is collected.\n"
+        "  - 📉 ball falls off platform: Game over.\n"
+        "  - ✅ all coins collected: Game won.\n"
+        "  - 🎥 main_camera follows ball's movement continuously.\n"
+        "4. UI Requirements:\n"
+        "  - Display WinText when all coins are collected.\n"
+        "  - Display FailText when ball falls off platform.\n"
+        "5. Each GameObject must clearly specify: name, create_type, asset_path, primitive_type, position, rotation, scale, tag, layer, components, scripts, script_fields.\n"
+        "6. Automatically add Canvas, EventSystem, and UI components.\n"
+    )
