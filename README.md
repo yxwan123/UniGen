@@ -10,7 +10,7 @@ Backed by **Multimodal Large Language Models (MLLMs)**, UniGen automates the ent
 4. **Debugging Agent** – fixes issues interactively via conversational debugging.  
 
 🎥 [Demo Video](https://youtube.com/[YourVideoLink])  
-📄 [Paper (ICSE 2026)](link-to-paper)  
+📄 [Paper](https://arxiv.org/abs/2509.26161v1)  
 
 ---
 
